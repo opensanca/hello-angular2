@@ -12,16 +12,16 @@ export class JobService {
   }
 
   getJobs(): Promise<Job[]> {
-    return this.http.get('http://localhost:9999/jobs').toPromise().then(res => res.json());
+    return this.http.get('http://159.203.162.141:9999/jobs').toPromise().then(res => res.json());
   }
 
   getJob(id: string): Promise<Job> {
-    return this.http.get(`http://localhost:9999/jobs/${id}`).toPromise().then(res => res.json());
+    return this.http.get(`http://159.203.162.141:9999/jobs/${id}`).toPromise().then(res => res.json());
   }
 
   addJob(job): Promise<Job> {
     return this.http
-    .post('http://localhost:9999/jobs', {titulo: job.titulo, descricao: job.descricao}, {headers: this.headers})
+    .post('http://159.203.162.141:9999/jobs', {titulo: job.titulo, descricao: job.descricao}, {headers: this.headers})
     .toPromise()
     .then(res => {
       return res.json()
