@@ -1,3 +1,16 @@
-<h1>
-  {{title}}
-</h1>
+
+<br><br>
+Titulo: <input type="text" [(ngModel)]="job.titulo">
+<br>
+Descrição: <input type="text" [(ngModel)]="job.descricao">
+<br>
+<button (click)="inserir()">Inserir</button>
+<br>
+<br>
+<div class="lista">
+  <div *ngFor="let job of jobs; let i = index;">
+    <job [job]="job" [index]="i"></job>
+  </div>
+</div>
+
+<br><br>
