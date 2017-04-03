@@ -1,5 +1,11 @@
-<h6>{{job._id}}</h6>
-<span>{{job.titulo}}</span>
-<p>{{job.descricao}}</p>
-<a [routerLink]="['/detail', job._id]">Ir para job</a>
+<div [collapse]="isCollapsed">
+  <h6>{{job._id}}</h6>
+  <span>{{job.titulo}}</span>
+  <p>{{job.descricao}}</p>
+  <a [routerLink]="['/detail', job._id]">Ir para job</a>
+</div>
+
+<button type="button" class="btn btn-primary"
+        (click)="isCollapsed = !isCollapsed">Toggle collapse
+</button>
 <hr>

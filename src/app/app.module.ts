@@ -10,6 +10,9 @@ import { JobDetailComponent } from './job-detail.component';
 import { MainComponent } from './main.component';
 import { JobService } from './job.service';
 
+import { AlertModule } from 'ng2-bootstrap';
+import { CollapseModule } from 'ng2-bootstrap/collapse';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +33,9 @@ import { JobService } from './job.service';
         path: 'detail/:id',
         component: JobDetailComponent
       }
-    ])
+    ]),
+    AlertModule.forRoot(),
+    CollapseModule.forRoot()
   ],
   providers: [JobService],
   bootstrap: [MainComponent]

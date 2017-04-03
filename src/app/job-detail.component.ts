@@ -12,6 +12,7 @@ import { JobService } from './job.service';
 export class JobDetailComponent implements OnInit {
 
   job: Job = new Job()
+  isCollapsed: boolean = false;
 
   constructor(
     private jobService: JobService,
